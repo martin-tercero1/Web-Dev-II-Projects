@@ -1,0 +1,27 @@
+<h1>To-Do List</h1>
+
+<form method="post">
+    <table>
+        {{#each data as | info item |}}
+          <tr>
+            <td><input id="{{item}}" name="{{item}}" {{info.done}} value="done" type="checkbox"></td>
+            <td>
+                <label for="{{item}}">{{info.message}}</label>
+            </td>
+          </tr>
+        {{/each}}
+          <tr>
+            <td colspan="2">
+              <input type="submit" value="Save" formaction="save"/>
+              <input type="submit" value="Remove Checked" formaction="remove"/>
+            </td>
+          </tr>
+    </table>
+</form>
+
+
+<form method="post" action="add">
+  Add new item:
+  <input type="text" name="item" placeholder="Enter item description" style="width: 60ex" autofocus required/>
+  <input type="submit" value="Add"/>
+</form>
