@@ -13,21 +13,22 @@
           <table>
               {{#each data as | info item |}}
                 <tr>
-                  <td><input id="{{item}}" name="{{item}}" {{info.done}} value="done" type="checkbox"></td>
+                  <td><input id="{{item}}" name="{{item}}" {{info.done}} {{#unless info.done}} unchecked {{/unless}} value="done" type="checkbox"></td>
                   <td>
                       <label for="{{item}}">{{info.message}}</label>
                   </td>
                 </tr>
 
+              {{else}}
+              <h2>No to-do items</h2>
+              {{/each}}
                 <tr>
                   <td colspan="2">
                     <input type="submit" id="submit" value="Save" formaction="save"/>
                     <input type="submit" id="remove" value="Remove Checked" formaction="remove"/>
                   </td>
                 </tr>
-              {{else}}
-              <h2>No to-do items</h2>
-              {{/each}}
+              
           </table>
       </form>
 
