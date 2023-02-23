@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../../../static/todo/styles.css"/>
+  <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
     <div class="container">
@@ -18,13 +18,16 @@
                       <label for="{{item}}">{{info.message}}</label>
                   </td>
                 </tr>
-              {{/each}}
+
                 <tr>
                   <td colspan="2">
                     <input type="submit" id="submit" value="Save" formaction="save"/>
                     <input type="submit" id="remove" value="Remove Checked" formaction="remove"/>
                   </td>
                 </tr>
+              {{else}}
+              <h2>No to-do items</h2>
+              {{/each}}
           </table>
       </form>
 
