@@ -1,0 +1,29 @@
+GET http://localhost:8000/api/questions
+
+###
+POST http://localhost:8000/api/questions
+Content-Type: application/json
+
+{
+    "summary": "First try with REST request",
+    "contents": "lorem ipsum",
+    "author": "Martin Tercero"
+}
+
+###
+GET http://localhost:8000/api/questions/:questionid
+
+###
+PUT http://localhost:8000/api/questions/:questionid
+
+###
+GET http://localhost:8000/api/questions/:questionid/answers
+
+###
+POST http://localhost:8000/api/questions/:questionid/answers
+
+###
+GET http://localhost:8000/api/answers/:answerid
+
+###
+PUT http://localhost:8000/api/answers/:answerid
