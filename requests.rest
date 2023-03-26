@@ -5,13 +5,13 @@ POST http://localhost:8000/api/questions
 Content-Type: application/json
 
 {
-    "summary": "First try with REST request",
+    "summary": "Third try with REST request",
     "contents": "lorem ipsum",
-    "author": "Martin Tercero"
+    "author": "MartinTercero"
 }
 
 ###
-GET http://localhost:8000/api/questions/:questionid
+GET http://localhost:8000/api/questions/641fc20e5ed68c3ec53dcb59
 
 ###
 PUT http://localhost:8000/api/questions/:questionid
