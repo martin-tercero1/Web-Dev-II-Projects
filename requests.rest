@@ -5,13 +5,13 @@ POST http://localhost:8000/api/questions
 Content-Type: application/json
 
 {
-    "summary": "First try with REST request",
+    "summary": "Second try with REST request",
     "contents": "lorem ipsum",
     "author": "MartinTercero"
 }
 ###
 
-GET http://localhost:8000/api/questions/64213ee1dc6ba0f5a0e47c67
+GET http://localhost:8000/api/questions/6421e9af9b26713b307c2a63
 ###
 
 PUT http://localhost:8000/api/questions/64213ee1dc6ba0f5a0e47c67
@@ -27,7 +27,7 @@ Content-Type: application/json
 GET http://localhost:8000/api/questions/64213b526261f16d6bff763f/answers
 ###
 
-POST http://localhost:8000/api/questions/64213ee1dc6ba0f5a0e47c67/answers
+POST http://localhost:8000/api/questions/6421e76e799340b45507bb8a/answers
 Content-Type: application/json
 
 {
@@ -36,7 +36,7 @@ Content-Type: application/json
 }
 ###
 
-GET http://localhost:8000/api/answers/64213fa6dc6ba0f5a0e47c8f
+GET http://localhost:8000/api/answers/6421e9af9b26713b307c2a63
 ###
 
 PUT http://localhost:8000/api/answers/64213fa6dc6ba0f5a0e47c8f
@@ -48,5 +48,8 @@ Content-Type: application/json
 }
 ###
 
-# DELETE http://localhost:8000/api/questions
-# ###
+DELETE http://localhost:8000/api/questions
+###
+
+GET http://localhost:8000/api/hello
+UPDATE http://localhost:8000/api/questions
