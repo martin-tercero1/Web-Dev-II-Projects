@@ -5,22 +5,22 @@ POST http://localhost:8000/api/questions
 Content-Type: application/json
 
 {
-    "summary": "Third try with REST request",
+    "summary": "third try with REST request",
     "contents": "lorem ipsum",
     "author": "MartinTercero"
 }
 
 ###
-GET http://localhost:8000/api/questions/641fc20e5ed68c3ec53dcb59
+GET http://localhost:8000/api/questions/6420e2e8e5dd289debfb187d
 
 ###
-PUT http://localhost:8000/api/questions/:questionid
+PUT http://localhost:8000/api/questions/6420d7dfa3dbedb2f883ab6c
 
 ###
 GET http://localhost:8000/api/questions/:questionid/answers
 
 ###
-POST http://localhost:8000/api/questions/:questionid/answers
+POST http://localhost:8000/api/questions/6420f287acb2fea6e2835f27/answers
 
 ###
 GET http://localhost:8000/api/answers/:answerid
