@@ -1,29 +1,52 @@
 GET http://localhost:8000/api/questions
-
 ###
+
 POST http://localhost:8000/api/questions
 Content-Type: application/json
 
 {
-    "summary": "Third try with REST request",
+    "summary": "First try with REST request",
     "contents": "lorem ipsum",
     "author": "MartinTercero"
 }
-
 ###
-GET http://localhost:8000/api/questions/641fc20e5ed68c3ec53dcb59
 
+GET http://localhost:8000/api/questions/64213ee1dc6ba0f5a0e47c67
 ###
-PUT http://localhost:8000/api/questions/:questionid
 
-###
-GET http://localhost:8000/api/questions/:questionid/answers
+PUT http://localhost:8000/api/questions/64213ee1dc6ba0f5a0e47c67
+Content-Type: application/json
 
+{
+    "summary": "Second try",
+    "contents": "lorem ipsum",
+    "author": "MartinTercero"
+}
 ###
-POST http://localhost:8000/api/questions/:questionid/answers
 
+GET http://localhost:8000/api/questions/64213b526261f16d6bff763f/answers
 ###
-GET http://localhost:8000/api/answers/:answerid
 
+POST http://localhost:8000/api/questions/64213ee1dc6ba0f5a0e47c67/answers
+Content-Type: application/json
+
+{
+    "contents": "Good post, you will  get there",
+    "author": "JavierAlfaro2"
+}
 ###
-PUT http://localhost:8000/api/answers/:answerid
+
+GET http://localhost:8000/api/answers/64213fa6dc6ba0f5a0e47c8f
+###
+
+PUT http://localhost:8000/api/answers/64213fa6dc6ba0f5a0e47c8f
+Content-Type: application/json
+
+{
+    "contents": "I changed my mind...",
+    "author": "JavierAlfaro2"
+}
+###
+
+# DELETE http://localhost:8000/api/questions
+# ###
