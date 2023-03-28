@@ -1,9 +1,11 @@
+@token= eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ0YXouaGFyZGluZy5lZHUiLCJzdWIiOiJmdmlkZXMiLCJhdWQiOiJ0ZXN0Iiwicm9sZXMiOltdLCJpYXQiOjE2Nzk5NzY3NTAsImV4cCI6MTY4MjU2ODc1MH0.7nleaLLJOe0tXt155gV1OPglirMG7jSXRlrAATy7frA8q_o-F361aGedKaPw2wVeOJ4uFmbP5i_fCOZd2IFvu0q-mNPj42svGsGtO1MlPe8Xq8j-0qYDVTST6N3K5HSgyVtCp1X0YJmDIgdjjAAfMduw5tLG1z32gPr5qK0A3DUcwjrcv5_oi-eSD9vOExNhEpSIpUsxdqq3EoSTRLfgpKrwAFETWI9RlOfEcXl3emgMxACyNSVT38oaNi3cS85is_bOvoSIu_2LfWHfhAHm6ER6DV05nuL8Sfzj1ZVot4lAl6rkTI0OQnUoIFPfgrqhUzcSC0mYIVM_aXE4XeI57A
+
+
 GET http://localhost:8000/api/questions
 ###
 
 POST http://localhost:8000/api/questions
 Content-Type: application/json
-
 {
     "summary": "first try with REST request",
     "contents": "lorem ipsum",
@@ -62,5 +64,6 @@ GET http://localhost:8000/api/likes/6420e2f7e5dd289debfb187f
 
 ###
 POST http://localhost:8000/api/likes/6420e2f7e5dd289debfb187f/mtercero1
+Authorization: Bearer {{token}}
 
 ###
