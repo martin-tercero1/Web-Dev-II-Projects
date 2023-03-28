@@ -185,8 +185,11 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+# Ignore for project
 /sessions
 /data
+/server-submissions
 *./tgz
 
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,node,windows
