@@ -1,13 +1,15 @@
-@token= eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ0YXouaGFyZGluZy5lZHUiLCJzdWIiOiJmdmlkZXMiLCJhdWQiOiJ0ZXN0Iiwicm9sZXMiOltdLCJpYXQiOjE2Nzk5NzY3NTAsImV4cCI6MTY4MjU2ODc1MH0.7nleaLLJOe0tXt155gV1OPglirMG7jSXRlrAATy7frA8q_o-F361aGedKaPw2wVeOJ4uFmbP5i_fCOZd2IFvu0q-mNPj42svGsGtO1MlPe8Xq8j-0qYDVTST6N3K5HSgyVtCp1X0YJmDIgdjjAAfMduw5tLG1z32gPr5qK0A3DUcwjrcv5_oi-eSD9vOExNhEpSIpUsxdqq3EoSTRLfgpKrwAFETWI9RlOfEcXl3emgMxACyNSVT38oaNi3cS85is_bOvoSIu_2LfWHfhAHm6ER6DV05nuL8Sfzj1ZVot4lAl6rkTI0OQnUoIFPfgrqhUzcSC0mYIVM_aXE4XeI57A
+@token= eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ0YXouaGFyZGluZy5lZHUiLCJzdWIiOiJpdHppIiwiYXVkIjoidGVzdCIsInJvbGVzIjpbImFkbWluIl0sImlhdCI6MTY3OTk3ODUxMCwiZXhwIjoxNjc5OTgyMTEwfQ.ZJKBZ8C0cVnbI0im33btuwGJkxV6O8kQv8YRxrF1TKfXnJyUT4K1G57Vx3MAN3Eu9ywhOx7MtBUzF4F1k6aLfGwNdJMR2Tn8FidSd4likHFjtFcV2s0es71zZbrj_laSS2Bj7W-pCtsdbiTSkLYcDs1tNo9LtDqH345F8BQhuSheIwALk2YVuMMoPkqfcjYY0UGW6jNKeLL9DpLahP4QXcDN-BZ0yKNcjyT4DVT9R-VBVeiBT8Ohze-RRlxpgg4GojfBnEbT9IeSMz1-6WXOR6B-DW-2oNUDkhADUeVw4Sy2v13COlWGv5FXW2scFOEB5Z6zSOe5W83uvmRbev2Z0A
 
 
 GET http://localhost:8000/api/questions
 ###
 
 POST http://localhost:8000/api/questions
+Authorization: Bearer {{token}}
 Content-Type: application/json
+
 {
-    "summary": "first try with REST request",
+    "summary": "Fifth try with REST request",
     "contents": "lorem ipsum",
     "author": "itzi"
 }
@@ -17,10 +19,11 @@ GET http://localhost:8000/api/questions/6420e2e8e5dd289debfb187d
 GET http://localhost:8000/api/questions/6421e9af9b26713b307c2a63
 ###
 PUT http://localhost:8000/api/questions/6420d7dfa3dbedb2f883ab6c
-
+Authorization: Bearer {{token}}
+###
 PUT http://localhost:8000/api/questions/64213ee1dc6ba0f5a0e47c67
 Content-Type: application/json
-
+Authorization: Bearer {{token}}
 {
     "summary": "Second try",
     "contents": "lorem ipsum",
@@ -28,14 +31,14 @@ Content-Type: application/json
 }
 ###
 POST http://localhost:8000/api/questions/6420f287acb2fea6e2835f27/answers
-
+Authorization: Bearer {{token}}
 ###
 GET http://localhost:8000/api/questions/6422026d0d6fb94ceb167536/answers
 ###
 
 POST http://localhost:8000/api/questions/6422026d0d6fb94ceb167536/answers
 Content-Type: application/json
-
+Authorization: Bearer {{token}}
 {
     "contents": "yessir, you will  get there",
     "author": "evaught"
@@ -47,7 +50,7 @@ GET http://localhost:8000/api/answers/642202830d6fb94ceb167539
 
 PUT http://localhost:8000/api/answers/6421fdcbf06ebb924a2fa0e1
 Content-Type: application/json
-
+Authorization: Bearer {{token}}
 {
     "contents": "I changed my mind...",
     "author": "JavierAlfaro2"
