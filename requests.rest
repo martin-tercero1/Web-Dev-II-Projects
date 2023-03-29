@@ -1,5 +1,4 @@
-@token=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ0YXouaGFyZGluZy5lZHUiLCJzdWIiOiJtYXJ0aW4xIiwiYXVkIjoidGVzdCIsInJvbGVzIjpbImFkbWluIl0sImlhdCI6MTY3OTk5NDQ5OCwiZXhwIjoxNjc5OTk4MDk4fQ.C-V8SeWw4ydmTdbAWfqY3muEYdXspcaVljG2MDCfDwt8za3RYRkrswONuGigD1fVuLucZWUiRmkUcPVwf376VCPKTC5KiO3u0c0-4Ay3I7EbhztZEfXPeOkc9kPaYZGAcZ4fxxgnlT6oJPMUsff0A25A8qdvvjnnHpcZ29DenQEby3xW2Zfz3MUudyAGH0Ttz3BE8JQwLtV3ac0Zz-zh_3hg_dcyKfbXgCHSVMX1LM0r5H5NqYJVhmyxvivAmnqF1CA-0e-RV316g6mkyyEQQ75cXBYRJ5xi66vUSzA45I-Y0aeF1eWKtU6wXajlIJMzwCOtPh7-xLDprJ7A7opDMw
-
+@token=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ0YXouaGFyZGluZy5lZHUiLCJzdWIiOiJtdGVyY2VybzEiLCJhdWQiOiJ0ZXN0Iiwicm9sZXMiOlsiYWRtaW4iXSwiaWF0IjoxNjgwMDUzMTE0LCJleHAiOjE2ODAwNTY3MTR9.Ykfuq-jhU-jxVjjkd095XDRpHl1dBwyL2JFR3setPofF_p4MrT5nEy-lWOxMaNC_CG-GChLx2BDzA97wqOfydzwpjr4FA5JR4Ge0VcxYpFWlgaZPeRXxiaNBl-j_EUVsNYcJIvYMlSCjjgq2al6xijPuX2FjPbtvPOsFx-LzZ2RZgPjuE9Qri9qrWn0RMeeP-78A_KSYAuCy10laz7SKI094X_L1Y9Iq1UE0ykNIwG_3F7MNCLX4mGfxuoihN9yh5WpxNI9Ux5xr66hPWmBLqC6tikMUiCufrpQM74DW7V4H5G_OK_A9BvPU2Nll3_tGdV13WL3rOanMzM2japLanw
 GET http://localhost:8000/api/questions
 ###
 
@@ -8,48 +7,46 @@ Authorization: Bearer {{token}}
 Content-Type: application/json
 
 {
-    "summary": "4 try with REST request",
+    "summary": "7 try with REST request",
     "contents": "lorem ipsum",
-    "author": "martin1"
+    "author": "mtercero1"
 }
 ###
-GET http://localhost:8000/api/questions/6420e2e8e5dd289debfb187d
 
-GET http://localhost:8000/api/questions/6421e9af9b26713b307c2a63
+GET http://localhost:8000/api/questions/64239bfbfc751f685f7709b8
 ###
-PUT http://localhost:8000/api/questions/6420d7dfa3dbedb2f883ab6c
-Authorization: Bearer {{token}}
-###
-PUT http://localhost:8000/api/questions/64213ee1dc6ba0f5a0e47c67
+
+PUT http://localhost:8000/api/questions/642396e3c248f4e5feef8aeb
 Content-Type: application/json
 Authorization: Bearer {{token}}
+
 {
-    "summary": "Second try",
+    "summary": "UPDATEEEEE",
     "contents": "lorem ipsum",
     "author": "MartinTercero"
 }
 ###
-POST http://localhost:8000/api/questions/6420f287acb2fea6e2835f27/answers
-Authorization: Bearer {{token}}
-###
-GET http://localhost:8000/api/questions/6422026d0d6fb94ceb167536/answers
+
+GET http://localhost:8000/api/questions/6421e76e799340b45507bb8a/answers
 ###
 
-POST http://localhost:8000/api/questions/6422026d0d6fb94ceb167536/answers
+POST http://localhost:8000/api/questions/6421e76e799340b45507bb8a/answers
 Content-Type: application/json
 Authorization: Bearer {{token}}
+
 {
     "contents": "yessir, you will  get there",
     "author": "evaught"
 }
 ###
 
-GET http://localhost:8000/api/answers/642202830d6fb94ceb167539
+GET http://localhost:8000/api/answers/642398746b8863bd8c18a1e9
 ###
 
-PUT http://localhost:8000/api/answers/6421fdcbf06ebb924a2fa0e1
+PUT http://localhost:8000/api/answers/642398746b8863bd8c18a1e9
 Content-Type: application/json
 Authorization: Bearer {{token}}
+
 {
     "contents": "I changed my mind...",
     "author": "JavierAlfaro2"
@@ -65,6 +62,14 @@ GET http://localhost:8000/api/questionsSSS
 GET http://localhost:8000/api/likes/6420e2f7e5dd289debfb187f
 ###
 
+GET http://localhost:8000/api/likes/6420e2f7e5dd289debfb187f/mtercero1
+Authorization: Bearer {{token}}
+###
+
 POST http://localhost:8000/api/likes/6420e2f7e5dd289debfb187f/mtercero1
+Authorization: Bearer {{token}}
+###
+
+DELETE http://localhost:8000/api/likes/6420e2f7e5dd289debfb187f/mtercero1
 Authorization: Bearer {{token}}
 ###
